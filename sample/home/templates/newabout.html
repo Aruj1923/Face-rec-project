@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: #111222;
+        }
+
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 100px;
+            color: #fff;
+        }
+
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main-title{
+            font-size: 4em;
+            margin-bottom: 50px;
+        }
+
+        .content{
+            position: relative;
+            width: 1150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content .image{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .content .image img{
+            z-index: 111;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+            border-radius: 10px;
+        }
+
+        .content .text-box{
+            z-index:222;
+            background:rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            max-width:400px;
+            border:1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transform: translate(-80px , 50px);
+        }
+
+        .content .text-box h3{
+            font-size:2em;
+            margin-bottom:10px;
+        }
+
+        .media-icons{
+            margin-top: 100px;   
+        }
+
+        .media-icons a{
+            color: #fff;
+            font-size: 2em;
+            margin: 60px;
+        }
+
+        .section-title{
+            font-size: 3em;
+            margin-bottom: 80px;
+        }
+
+        .info--title{
+            font-size:1.8em;
+            margin-bottom:10px ;
+        }
+
+        .info{
+            width:700px;
+            margin-left: 50px;
+        }
+
+        .media-info{
+            width:400px;
+            margin-left: 50px;
+        }
+
+        .media-info li{
+            list-style: none;
+            font-size: 1.4rem;
+        }
+
+        .media-info li a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .media-info li:not(:last-child){
+            margin-bottom: 50px;
+        }
+
+        .media-info li:nth-child(1), .media-info li:nth-child(5){
+            padding-left: 100px;
+        }
+
+        .media-info li:nth-child(2), .media-info li:nth-child(4){
+            padding-left: 50px;
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{  'account'  }}">Face-Rec</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{{ 'home' }}">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="{{  'about'  }}">About</a>
+                    </li>
+
+                    <a class="nav-link" href="{{   'contact'   }}">Contact Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="sec-01">
+        <div class="container" >
+            <h2 class="main-title" >Our Team Members</h2>
+            <div class="content" >
+                <div class="image">
+                    <img src="{%static 'ankit.jpeg.jpg'%}" alt="">
+                </div>
+                <div class="text-box">
+                  <h3>ANKIT CHAUDHARY</h3>
+                  <p>Python Developers are crucial contributors to the design, development, and maintenance of software applications that leverage the power of the Python programming language</p>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ankit-chaudhary-453250259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-01">
+        <div class="container" >
+            <div class="content" >
+                <div class="image">
+                    <img src="{%static 'apoorva.jpg'%}" alt="">
+                </div>
+                <div class="text-box">
+                  <h3>APOORVA</h3>
+                  <p>Experienced front-end developer proficient in optimizing web performance and ensuring cross-browser compatibility. specializing in web development, UI design, HTML, and JavaScript. Adept at identifying opportunities to enhance front-end design and improve the UX.</p>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="sec-01">
+        <div class="container" >
+            <div class="content" >
+                <div class="image">
+                    <img src="{%static 'Aruj.jpg'%}" alt="">
+                </div>
+                <div class="text-box">
+                  <h3>ARUJ dWIVEDI</h3>
+                  <p>Experienced artificial intelligence engineer with a strong background in developing award-winning machine learning solutions for a diverse clientele. have experience includes developing a customer segmentation algorithm. Strong skills include Predictive Modelling, Data Mining, and Quantitative Analysis.</p>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="sec-01">
+        <div class="container" >
+            <div class="content" >
+                <div class="image">
+                    <img src="{%static 'khushi.jpg'%}" alt="">
+                </div>
+                <div class="text-box">
+                  <h3>KHUSHI</h3>
+                  <p>Experienced front-end developer proficient in optimizing web performance and ensuring cross-browser compatibility. Designed and implemented responsive design framework, leading to a 40% increase in mobile traffic conversion rates. Skilled in HTML, CSS, and JavaScript, and expertise in front-end frameworks.</p>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+      <script>
+        ScrollReveal({
+            // reset: true,
+            distance: '60px',
+            duration:2500,
+            delay:400
+        });
+
+        ScrollReveal().reveal('.main-title',{delay:500, origin:'left'});
+        ScrollReveal().reveal('.sec-01 .image',{delay:600, origin:'bottom'});
+        ScrollReveal().reveal('.text-box',{delay:700, origin:'right'});
+        ScrollReveal().reveal('.media-icons i',{delay:500, origin:'bottom', interval:200});
+        // ScrollReveal().reveal('.sec-02 .image, sec-03 .image',{delay:500, origin:'top'});
+        ScrollReveal().reveal('.media-info li',{delay:500, origin:'left', interval:200});
+      </script>
+
+</body>
+</html>

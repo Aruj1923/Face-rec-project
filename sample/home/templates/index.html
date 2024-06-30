@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      background-color: #96D4D4;
+    }
+
+    .main-heading {
+      margin-left: 13%;
+      margin-top: 3%;
+      margin-right: 15%;
+      margin-bottom: 1%;
+    }
+
+    .for-p {
+      margin-left: 13%;
+      margin-top: 3%;
+      margin-right: 14%;
+      margin-bottom: 50%;
+
+    }
+  </style>
+  <title>Home</title>
+</head>
+
+<body>
+
+  <div>
+    
+  </div>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="{{  'account'  }}">Face Rec</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{  'about/'  }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="" method="post">
+        {% csrf_token %}
+        <!-- <label for="your_name">Your name: </label> -->
+        <input class="form-control mr-sm-2" type="text" name="your_name" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="OK">Submit</button>
+      </form>
+    </div>
+  </nav>
+
+  <h1 class='main-heading'>This is something about {{Topic_name}} heading</h1>
+
+  <img src="https://projectwale.com/wp-content/uploads/2020/05/artificial-intelligence-1024x576.jpg"
+    class="rounded mx-auto d-block" alt="Responsive image">
+
+  <!-- <h1>Hyeee this side aruj</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, voluptas officia repudiandae ratione quia odio
+        magni officiis. Placeat aspernatur assumenda nemo beatae. Voluptates provident dolor animi, nesciunt expedita
+        eligendi deleniti?</p>
+
+        {{pepoles}}
+
+        <table>
+            <tr>
+              <th>Sr,No.</th>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+            {%for pepoles in pepoles%}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{pepoles.name}}</td>
+              <td>{{pepoles.age}}</td>
+            </tr>
+            {% endfor %}
+          </table> -->
+  <div class = 'for-p'>
+    {%for pepoles in para_list%}
+    {% if pepoles != Null %}
+    <p>{{pepoles}}</p>
+    {% else %}
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, architecto. Temporibus odit assumenda vitae
+      id
+      a nesciunt et provident, minima architecto inventore dolorem, dolor velit, quos optio esse tenetur obcaecati!</p>
+    {% endif %}
+    {% endfor %}
+  </div>
+</body>
+
+</html>

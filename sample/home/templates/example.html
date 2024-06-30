@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Home</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Favicons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        /* GLOBAL STYLES
+-------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
+
+        /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+        /* Carousel base class */
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+
+        /* MARKETING CONTENT
+-------------------------------------------------- */
+
+        /* Center align the text within the three columns below the carousel */
+        .marketing .col-lg-4 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+
+        /* Featurettes
+------------------------- */
+
+        .featurette-divider {
+            margin: 5rem 0;
+            /* Space out the Bootstrap <hr> more */
+        }
+
+        /* Thin out the marketing headings */
+        .featurette-heading {
+            font-weight: 300;
+            line-height: 1;
+        }
+
+
+        /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+        @media (min-width: 40em) {
+
+            /* Bump up size of carousel content */
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+
+        /* GLOBAL STYLES
+-------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
+
+        /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+        /* Carousel base class */
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+
+        /* MARKETING CONTENT
+-------------------------------------------------- */
+
+        /* Center align the text within the three columns below the carousel */
+        .marketing .col-lg-4 {
+            margin-left: 16%;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        /* rtl:begin:ignore */
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+        /* rtl:end:ignore */
+
+
+        /* Featurettes
+------------------------- */
+
+        .featurette-divider {
+            margin: 5rem 0;
+            /* Space out the Bootstrap <hr> more */
+        }
+
+        /* Thin out the marketing headings */
+        .featurette-heading {
+            font-weight: 300;
+            line-height: 1;
+            /* rtl:remove */
+            letter-spacing: -.05rem;
+        }
+
+
+        /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+        @media (min-width: 40em) {
+
+            /* Bump up size of carousel content */
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <style>
+        @keyframes rotate {
+            0% {
+                transform: rotate(0)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .geS5n {
+            padding: 34px 24px 24px !important
+        }
+
+        .question-ai-box {
+            position: absolute;
+            top: 8px;
+            right: 8px
+        }
+
+        .question-ai-loading,
+        .question-ai-ask,
+        .question-ai-answer,
+        .question-ai-error__network,
+        .question-ai-error__tip,
+        .question-ai-img {
+            cursor: pointer;
+            box-sizing: border-box;
+            user-select: none;
+            border-radius: 12px;
+            width: fit-content;
+            height: 24px;
+            padding: 4px;
+            transition: all .3s ease-in-out;
+            overflow: hidden
+        }
+
+        .question-ai-loading {
+            background-color: #edf3ff;
+            justify-content: center;
+            align-items: center;
+            max-width: 150px;
+            display: flex
+        }
+
+        .question-ai-loading__logo {
+            transform-origin: 50%;
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px;
+            animation: 1s linear infinite rotate
+        }
+
+        .question-ai-loading__title {
+            color: #797a7a;
+            margin: 0 8px;
+            font-size: 12px
+        }
+
+        .question-ai-img {
+            background-color: #edf3ff !important;
+            display: flex !important
+        }
+
+        .question-ai-img__title {
+            color: #005cff;
+            white-space: nowrap;
+            cursor: default;
+            margin: 0 4px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-img__again {
+            color: #131414;
+            white-space: nowrap;
+            cursor: pointer;
+            border-left: 1px solid #005cff;
+            width: fit-content;
+            height: 16px;
+            padding: 0 8px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-ask {
+            background-color: #005cff;
+            max-width: 24px
+        }
+
+        .question-ai-ask:hover {
+            max-width: 400px;
+            background-color: #edf3ff !important
+        }
+
+        .question-ai-ask:hover .question-ai-ask__hover {
+            display: flex !important
+        }
+
+        .question-ai-ask:hover .question-ai-ask__logo {
+            display: none !important
+        }
+
+        .question-ai-ask__close {
+            cursor: pointer;
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: -8px;
+            right: -8px
+        }
+
+        .question-ai-ask__logo,
+        .question-ai-ask__chat {
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px
+        }
+
+        .question-ai-ask__hover {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            display: none
+        }
+
+        .question-ai-ask__title {
+            color: #005cff;
+            white-space: nowrap;
+            margin: 0 4px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-answer {
+            background-color: #edf3ff;
+            justify-content: center;
+            align-items: center;
+            display: flex
+        }
+
+        .question-ai-answer__text {
+            color: #131414;
+            white-space: nowrap;
+            margin: 0 4px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-answer__text:hover {
+            color: #005cff
+        }
+
+        .question-ai-answer__right {
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px
+        }
+
+        .question-ai-error__network {
+            cursor: default
+        }
+
+        .question-ai-error__network,
+        .question-ai-error__tip {
+            background-color: #ffe6e3;
+            justify-content: center;
+            align-items: center;
+            display: flex
+        }
+
+        .question-ai-error__icon {
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px
+        }
+
+        .question-ai-error__title {
+            color: #ff3939;
+            white-space: nowrap;
+            margin: 0 4px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-error__again {
+            color: #131414;
+            white-space: nowrap;
+            cursor: pointer;
+            border-left: 1px solid #ff3939;
+            width: fit-content;
+            height: 16px;
+            padding: 0 8px;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        .question-ai-error__right {
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px
+        }
+
+        #close-copilot-dialog {
+            color: #1f1f1f;
+            background-color: #000000a3;
+            width: 100vw;
+            height: 100vh;
+            font-size: 14px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden
+        }
+
+        #close-copilot-dialog #close-copilot-card {
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 16px;
+            width: 388px;
+            height: 250px;
+            padding: 24px;
+            position: fixed;
+            top: 50vh;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        #close-copilot-dialog #close-copilot-card .questionai-card-header {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 24px;
+            display: flex
+        }
+
+        #close-copilot-dialog #close-copilot-card .questionai-card-header .title {
+            color: #131414;
+            text-align: center;
+            font-family: PingFangSC-Semibold;
+            font-size: 20px;
+            font-weight: 600
+        }
+
+        #close-copilot-dialog #close-copilot-card .questionai-card-header img {
+            cursor: pointer;
+            width: 24px;
+            height: 24px
+        }
+
+        #close-copilot-dialog #close-copilot-card .radio-item {
+            margin-bottom: 12px
+        }
+
+        #close-copilot-dialog #close-copilot-card .radio-item * {
+            cursor: pointer
+        }
+
+        #close-copilot-dialog #close-copilot-card .radio-item label {
+            color: #131414;
+            flex-direction: row;
+            align-items: center;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            display: flex
+        }
+
+        #close-copilot-dialog #close-copilot-card .radio-item label .radio-item__radio {
+            opacity: 0;
+            position: absolute
+        }
+
+        #close-copilot-dialog #close-copilot-card .radio-item label .radio-item__indicate-img {
+            flex: none;
+            width: 16px;
+            margin-right: 5px
+        }
+
+        #close-copilot-dialog #close-copilot-card .tips-item {
+            color: #8c91ab;
+            margin-bottom: 20px;
+            padding-left: 6px;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            font-weight: 400
+        }
+
+        #close-copilot-dialog #close-copilot-card .btn-box {
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            display: flex
+        }
+
+        #close-copilot-dialog #close-copilot-card .btn-box .cancel-btn,
+        #close-copilot-dialog #close-copilot-card .btn-box .confirm-btn {
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 24px;
+            width: fit-content;
+            height: 40px;
+            padding: 0 24px;
+            font-family: PingFangSC-Semibold;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 40px
+        }
+
+        #close-copilot-dialog #close-copilot-card .btn-box .cancel-btn {
+            color: #131414;
+            background-color: #f5f5f5
+        }
+
+        #close-copilot-dialog #close-copilot-card .btn-box .confirm-btn {
+            color: #fff;
+            background-color: #005cff;
+            margin-left: 12px
+        }
+
+        .question-ai-guide__border {
+            z-index: 999;
+            box-sizing: border-box;
+            color: #131414;
+            background-color: #fff;
+            border-radius: 16px;
+            width: fit-content;
+            height: 48px;
+            padding: 1px;
+            font-size: 14px;
+            position: absolute;
+            top: -50px;
+            right: 4px
+        }
+
+        .question-ai-guide__box {
+            box-sizing: border-box;
+            background-image: linear-gradient(135deg, #ccdfff 0%, #b3faff 100%);
+            border-radius: 16px;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 8px 0 16px;
+            display: flex
+        }
+
+        .question-ai-guide__btn {
+            box-sizing: border-box;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 20px;
+            width: fit-content;
+            height: 32px;
+            margin-left: 16px;
+            padding: 0 16px;
+            line-height: 32px
+        }
+
+        .question-ai-guide__borderdown {
+            border-top: 8px solid #fff;
+            border-left: 16px solid #0000;
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -8px;
+            right: 16px
+        }
+
+        .question-ai-guide__boxdown {
+            z-index: 9999;
+            border-top: 7px solid #b3faff;
+            border-left: 14px solid #0000;
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -6px;
+            right: 17px
+        }
+
+        .qai-single-pay-modal[data-v-0512c4] {
+            z-index: 2147400001;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+            font-size: 14px;
+            line-height: normal;
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            box-shadow: 0 8px 16px #919eab29
+        }
+
+        .qai-single-pay-modal .modal-mask[data-v-0512c4] {
+            z-index: 1;
+            background: #000000a3;
+            position: absolute;
+            inset: 0
+        }
+
+        .qai-single-pay-modal span[data-v-0512c4] {
+            display: inline-block
+        }
+
+        .qai-single-pay-modal img[data-v-0512c4] {
+            display: block
+        }
+
+        .qai-single-pay-modal .flex-center[data-v-0512c4] {
+            align-items: center;
+            display: flex
+        }
+
+        .qai-single-pay-modal .modal-body[data-v-0512c4] {
+            z-index: 2;
+            box-sizing: border-box;
+            background-image: linear-gradient(142deg, #e6efff 0%, #e0fdff 100%);
+            border-radius: 16px;
+            flex-direction: column;
+            align-items: center;
+            width: 396px;
+            max-width: 500px;
+            max-height: 90%;
+            padding: 0 12px 24px;
+            transition: transform .2s ease-in-out;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%)translateY(-50%)
+        }
+
+        .qai-single-pay-modal .modal-body .flex-around[data-v-0512c4] {
+            justify-content: space-around;
+            align-items: center;
+            display: flex
+        }
+
+        .qai-single-pay-modal .modal-body .toast[data-v-0512c4] {
+            text-align: center;
+            color: #fff;
+            letter-spacing: 0;
+            text-align: center;
+            background: #000c;
+            border-radius: 16px;
+            max-width: 360px;
+            height: 52px;
+            margin: auto;
+            padding: 0 24px;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 52px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .qai-single-pay-modal .modal-body .main-header[data-v-0512c4] {
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 62px;
+            display: flex;
+            position: relative
+        }
+
+        .qai-single-pay-modal .modal-body .main-header .plus_bg[data-v-0512c4] {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            bottom: -10px;
+            right: 50px
+        }
+
+        .qai-single-pay-modal .modal-body .main-header .plus_logo[data-v-0512c4] {
+            width: 152px;
+            height: 32px;
+            margin-left: 12px
+        }
+
+        .qai-single-pay-modal .modal-body .main-header .icon_close[data-v-0512c4] {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            margin-right: 4px
+        }
+
+        .qai-single-pay-modal .modal-body .main-white[data-v-0512c4] {
+            background: #fffc;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            padding: 32px
+        }
+
+        .qai-single-pay-modal .modal-body .main-white .title[data-v-0512c4] {
+            color: #141414;
+            letter-spacing: 0;
+            margin-bottom: 24px;
+            font-family: Helvetica;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px
+        }
+
+        .qai-single-pay-modal .modal-body .main-white .desc-list[data-v-0512c4] {
+            color: #141414;
+            letter-spacing: 0;
+            flex-direction: column;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            display: flex;
+            margin-left: 0 !important
+        }
+
+        .qai-single-pay-modal .modal-body .main-white .desc-list .item[data-v-0512c4] {
+            align-items: center;
+            display: flex;
+            margin-bottom: 16px !important
+        }
+
+        .qai-single-pay-modal .modal-body .main-white .desc-list .item[data-v-0512c4]:last-child {
+            margin-bottom: 0 !important
+        }
+
+        .qai-single-pay-modal .modal-body .main-white .desc-list .item img[data-v-0512c4] {
+            width: 28px;
+            height: 28px;
+            margin-right: 16px
+        }
+
+        .qai-single-pay-modal .modal-body .btn_subscribe[data-v-0512c4] {
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            background-image: linear-gradient(94deg, #8b48ff 0%, #5741ff 51%, #005cff 100%);
+            border-radius: 24px;
+            width: 308px;
+            height: 40px;
+            font-family: Helvetica;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 40px
+        }
+
+        .main-text {
+            text-align: justify;
+            font-weight: 500;
+            /* margin-right: 39%; */
+            margin-left: 15%;
+
+        }
+
+        .main-img {
+            margin-right: 5%;
+            /* margin-left: 70%; */
+            margin-bottom: 100%;
+        }
+
+        .imgs {
+            text-align: justify;
+            position: fixed;
+            margin-top: 100%;
+
+        }
+
+        .text0 {
+            margin-right: 39%;
+        }
+
+        /* new nav bar  */
+        /* ======================================== */
+        
+
+    </style>
+</head>
+<plasmo-csui id="qaiUnderlineWordShadowHostEl"></plasmo-csui>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{  'account'  }}">Face-Rec</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{  'about'  }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{   'contact'   }}" tabindex="-1" aria-disabled="true">Contact Us</a>
+                        </li>
+                    </ul>
+                     
+                    <form class="d-flex" action="" method="post">
+                        {% csrf_token %}
+                        
+                        <input class="form-control me-2" type="text" name="your_name" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit" value="OK">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- <nav>
+            <div class="navbar">
+                <div class="logo"><a href="{{  'account'  }}">Face-Rec</a></div>
+                <ul class="menu">
+                    <li><a href="{{ 'home' }}">Home</a></li>
+                    <li><a href="{{  'about'  }}">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+     -->
+    </header>
+
+    <main>
+        {% load static %}
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                    class=""></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                    class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%"
+                            fill="https://assets-global.website-files.com/61845f7929f5aa517ebab941/6440f9477c2a321f0dd6ab61_How%20Artificial%20Intelligence%20(AI)%20Is%20Used%20In%20Biometrics.jpg">
+                        </rect>
+                    </svg>
+                    <img width="100%" height="100%" src="{%static 'AI 1.jpg'%}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Future AI</h1>
+                            <p>We connect you and your web site with AI.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <img width="100%" height="100%" src="{% static 'AI 2.jpg'%}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Want Some Information.</h1>
+                            <p>Search any subject that you want to search.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <img width="100%" height="100%" src="{%static 'AI 3.jpg'%}" alt="">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Data Analytics</h1>
+                            <p>We also provide deep analytics to your business.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing" data-aos="zoom-in-up">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">
+                    <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg> -->
+
+                    <h2>{{Topic_name}}</h2>
+                    <p>Cameras identify faces, unlocking phones or spotting suspects.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <!-- <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div>/.col-lg-4 -->
+                <div class="col-lg-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">
+                    <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg> -->
+
+                    <h2>Images</h2>
+                    <p>Computer scans face, identifying person in image.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+            <!-- 
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider"> -->
+        </div><!-- /.container -->
+        <!-- /END THE FEATURETTES -->
+        <!-- <div class = 'main-text'> -->
+        <div class='row'>
+            <div class='col-8'>
+                <div class='main-text'data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    {%for pepoles in para_list%}
+                    {% if pepoles != Null %}
+                    <p>{{pepoles}}</p>
+                    {% else %}
+                    <p >
+                        Face recognition systems are technologies that can identify or verify a person's identity using
+                        their face. Here's a quick breakdown:
+
+                    <h4 data-aos="fade-right"
+                    data-aos-duration="3000"> How it Works: </h4>
+                    <ol>
+                        <li> Capture a Face Image: The system takes a digital image or video frame of the person.</li>
+                        <li>Facial Feature Detection: The system identifies and measures key features of the face, like
+                            the distance between the eyes or the shape of the jawline.</li>
+                        <li>Encoding or Matching:
+                            <ul>
+                                <li> Traditional methods: Use template matching techniques like Haar cascades to compare
+                                    the extracted features to stored templates of known faces.</li>
+                                <li>Deep learning methods: Extract a unique numerical representation (encoding) of the
+                                    face using pre-trained deep learning models. This encoding is then compared to a
+                                    database of encoded faces to find a match.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h4 data-aos="fade-right""
+                    data-aos-duration="3000">Applications:</h4>
+                    <ul>
+                        <li> Security and Access Control: Used for secure access to devices, buildings, or restricted
+                            areas.</li>
+                        <li> Law Enforcement: Helps identify suspects or missing persons.</li>
+                        <li> Consumer Convenience: Enables contactless payments, photo tagging, or personalized
+                            experiences.</li>
+                    </ul>
+                    <h4 data-aos="fade-right""
+                    data-aos-duration="3000"> Pros: </h4>
+                    <ul>
+                        <li>Efficient and fast compared to other identification methods.</li>
+                        <li> Can be contactless for added security and hygiene.</li>
+                    </ul>
+                    <h4 data-aos="fade-right"
+                    data-aos-duration="3000">Cons:</h4>
+                    <ul>
+                        <li>Privacy concerns about data collection and potential misuse.</li>
+                        <li>Accuracy limitations, especially with certain demographics.</li>
+                        <li>Security risks from hacking or spoofing attacks</li>
+                    </ul>
+                    Face recognition technology finds applications across various industries and domains. Some common
+                    areas where face recognition technology is used <br>
+                    <ol>
+                        <li>Security and Surveillance: Face recognition is widely used in security and surveillance
+                            systems for access control, monitoring public spaces, and identifying individuals of
+                            interest in real-time.</li><br>
+                        <li>Biometric Authentication: Face recognition is utilized for biometric authentication in
+                            devices such as smartphones, tablets, and laptops to unlock devices, authorize transactions,
+                            and secure sensitive information.</li><br>
+                        <li>Law Enforcement and Forensics: Law enforcement agencies use face recognition technology to
+                            identify suspects, match faces to criminal databases, and aid in investigations. It can also
+                            be used in forensic analysis to identify individuals from surveillance footage or crime
+                            scene images.</li><br>
+                        <li>Border Control and Immigration: Face recognition technology is employed at border
+                            checkpoints and immigration control points to verify the identity of travelers, screen for
+                            potential security threats, and enhance border security.</li><br>
+                        <li>Retail and Marketing: In the retail industry, face recognition technology can be used for
+                            customer analytics, personalized marketing, and improving the shopping experience. It can
+                            track customer demographics, monitor foot traffic, and offer targeted promotions based on
+                            customer preferences.</li><br>
+                        <li>Healthcare: Face recognition technology is utilized in healthcare for patient
+                            identification, access control to medical records, and monitoring patient movements within
+                            healthcare facilities. It can also assist in identifying individuals with medical conditions
+                            or disabilities.</li><br>
+                        <li>Education: Face recognition technology can be used in educational institutions for
+                            attendance tracking, access control to school premises, and enhancing campus security. It
+                            can automate attendance management processes and improve overall safety.</li><br>
+                        <li>Automotive Industry: Face recognition technology is integrated into some vehicles for driver
+                            monitoring, personalized vehicle settings, and enhanced safety features. It can detect
+                            driver fatigue, distraction, and unauthorized access to the vehicle.</li><br>
+                        <li>Hospitality and Tourism: Face recognition technology is used in hotels, airports, and
+                            tourist attractions for guest recognition, check-in processes, and enhancing customer
+                            service. It can personalize guest experiences and streamline service delivery.</li><br>
+                        <li>Financial Services: Face recognition technology is employed in banking and financial
+                            services for identity verification, fraud prevention, and secure authentication of customers
+                            in online banking and financial transactions.</li><br>
+                        <li>Entertainment and Gaming: Face recognition technology is utilized in gaming and
+                            entertainment applications for player identification, personalized gaming experiences, and
+                            interactive experiences such as augmented reality (AR) filters and virtual try-on.</li><br>
+                    </ol><br><br>
+                    These are just a few examples of the diverse applications of face recognition technology across
+                    different industries and sectors. As the technology continues to advance, new use cases and
+                    applications are continually emerging.
+                    </p>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class='col-4'>
+                <div class=''>
+                    <div class='main-img'>
+                        {%for imgs in imges%}
+                        {% if imgs != Null%}
+                        <img src="{{imgs}}" alt="">
+                        {%else%}
+                        <img data-aos="flip-right"  width="90%" height="50%"
+                            src="https://miro.medium.com/v2/resize:fit:1400/1*24Hj2PgyawR20kJBj8NU0g.png" alt="image"> <br><br>
+                        <img data-aos="flip-right" width="90%" height="50%" src="{%  static 'img1.jpg'  %}" alt="image"><br><br>
+                        <img data-aos="flip-right" width="90%" height="50%" src="{%  static 'img2.jpg'  %}" alt="image"><br><br>
+                        <img data-aos="flip-right" width="90%" height="50%" src="{%  static 'img3.jpg'  %}" alt="image"><br><br>
+                        <img data-aos="flip-right" width="90%" height="90%" src="{%  static 'img4.jpg'  %}" alt="image"><br><br>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div><br><br><br>
+
+
+
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>© 2017-2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </footer>
+    </main>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+//         $("button").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $(".row").offset().top},
+//         'slow');
+// });
+    </script>
+    
+
+
+
+</body><plasmo-csui id="qaiSidebarShadowHostEl"></plasmo-csui>
+
+</html>

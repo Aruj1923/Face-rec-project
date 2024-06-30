@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>FaceRec</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "arial", heletica, sans-serif;
+            font-size: 12px;
+            background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+            -webkit-animation: 10s linear 0s normal none infinite animate;
+            -moz-animation: 10s linear 0s normal none infinite animate;
+            -ms-animation: 10s linear 0s normal none infinite animate;
+            -o-animation: 10s linear 0s normal none infinite animate;
+            animation: 10s linear 0s normal none infinite animate;
+
+        }
+
+        @-webkit-keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 500px 0;
+            }
+        }
+
+        @-moz-keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 500px 0;
+            }
+        }
+
+        @-ms-keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 500px 0;
+            }
+        }
+
+        @-o-keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 500px 0;
+            }
+        }
+
+        @keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 500px 0;
+            }
+        }
+
+        header {
+
+            text-align: center;
+        }
+
+        nav {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 75px;
+            background: #2980b9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        nav .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 90%;
+            background: #2980b9;
+            margin: auto;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        nav .navbar .logo a {
+            color: #fff;
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        nav .navbar .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .navbar .menu li a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        section {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: #96c7e8;
+            font-size: 70px;
+        }
+
+        #Home {
+            background: #fff;
+        }
+
+        #About {
+            background: #f2f2f2;
+        }
+
+        #Category {
+            background: #e6e6e6;
+        }
+
+        #Latest {
+            background: #fff;
+        }
+
+        #Contact {
+            background: #f2f2f2;
+        }
+
+        #Feedback {
+            background: #e6e6e6;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-container .button {
+            background-color: #f46723;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .button-container .button:hover {
+            background-color: #da9021;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container .button:active {
+            transform: translateY(2px);
+        }
+
+        .stop-button {
+            margin-left: 20px;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            margin-top: 20px;
+            font-size: 48px;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        #imageContainer {
+            margin-top: 0px;
+
+        }
+
+        .head {
+
+            padding-left: 35px;
+            display: flex;
+            align-items: center;
+        }
+
+        .control:checked~.conditional {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        .control:not(:checked)~.conditional {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        #imageContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            margin-left: 5%;
+        }
+
+        img#myImage {
+            margin-top: 10px;
+            
+        }
+
+        .form-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #stop_stream {
+            background-color: #f46723;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #stop_stream:hover {
+            background-color: #da9021;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-section {
+            position: absolute;
+            top: 150px;
+            right: 50px;
+            background-color: #f5f5f5;
+
+            border: 1px solid #ddd;
+            padding: 30px;
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        .login-section h2 {
+            margin-top: 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .login-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .login-section input[type="text"],
+        .login-section input[type="text"] {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-section input[type="submit"] {
+            width: 100%;
+            height: 50px;
+            background-color: #5187eb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-section input[type="submit"]:hover {
+            background-color: #5187eb;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% load static %}
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo"><a href="#">Face-Rec</a></div>
+                <ul class="menu">
+                    <li><a href="{{ 'home' }}">Home</a></li>
+                    <li><a href="{{  'about'  }}">About</a></li>
+                    <li><a href="{{   'contact'   }}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="head" style="margin-top: 50px;">
+            <div class="button-container">
+                <h1> Video Live Stream </h1>
+                <button id="changeImageButton" class="button" onclick="showImage()">Scan Image</button>
+
+                <form method="post">
+
+                    {% csrf_token %}
+                    <input type="hidden" name="offname" value="False">
+                    <button id="stop_stream" type="submit">Stop Scan</button>
+                    
+                </form>
+                <a class="btn btn-primary" href="{{  'newform'  }}" role="button">Register</a>
+                <!-- <button id="stop_stream" class="button stop-button" onclick="stopScan()">Stop Scan</button> -->
+            </div>
+            <div id="imageContainer">
+                
+
+                <!-- <img id="myImage" alt="Image"> -->
+                <img id="mynewImage" src="{% static 'face rec .jpg' %}"
+                    alt="">
+
+            </div>
+           
+
+        </div>
+
+        <script>
+            const myImage = document.getElementById("mynewImage");
+            const changeImageButton = document.getElementById("changeImageButton");
+            function showImage() {
+                
+                var imageContainer = document.getElementById("myImage").src = "{% url 'video_cap' %}";
+
+            }
+            changeImageButton.addEventListener("click", function() {
+            myImage.src = "{% url 'video_cap' %}";
+            });
+        </script>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
